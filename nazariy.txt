@@ -1,0 +1,128 @@
+1-savol
+en:   Define Python's main data structures and give an example of each.
+uz:   Python-ning asosiy ma'lumotlar tuzilmalarini aniqlang va har biriga misol keltiring.
+
+init (butun sonlarni qabul qiladi)
+Masalan: (1, 2, 3, 4, 5, 6, 7, 8, 9, )
+
+List (Ro'yxat): Bu ma'lumotlar turi, qatorlar joylashgan bir qator elementlardan iborat.
+Masalan:numbers = [1, 2, 3, 4, 5]
+
+Tuple: Ro'yxatga o'xshash, lekin o'zgartirishsiz. (o'zgartirishsiz tuple)
+Masalan:point = (10, 20)
+
+Dictionary (Lug'at): Har bir element kalit va qiymat birligida saqlanadi.
+Masalan:student = {'ism': 'eldor', 'yosh': 19, 'o'quvchi': 1}
+
+Set: Unikal elementlarni saqlaydi.
+Masalan:unique_numbers = {1, 2, 3, 4, 5}
+
+String (Matn): Matnlar qatorlar.
+Masalan:name = "Eldorbek"
+
+Integer (Butun son): Butun sonlar.
+Masalan:age = 25
+
+Float (O'nlik son): O'nlik sonlar.
+Masalan:height = 1.75
+
+
+2-savol
+eng: Explain the difference between AND, OR NOT
+uz: VA, YOKI YO'Q o'rtasidagi farqni tushuntiring
+
+and mantiqiy ko'paytirish amali.
+ Masalan:True=1, False=0,  1 and 0 = 0;  1 and 1 = 1; 0 and 0 =0;
+or mantiqiy bog'lash amali .
+ Masalan: 1 or 1 = 1;  1 or 0 = 1; 0 or 0 = 0;
+Not mantiqiy inkor amali .
+      Masalan: not True = False; not False = True;
+
+Boolean (Mantiqiy qiymat): True yoki False.
+Masalan:is_student = True
+
+
+3-savol
+eng: What is Git, and how is it used in software development? Briefly describe common Git commands.
+uz: Git nima va u dasturiy ta'minotni ishlab chiqishda qanday ishlatiladi? Umumiy Git buyruqlarini qisqacha tavsiflab bering.
+
+
+Git, dasturini boshqarish va ularga qo'shimcha imkoniyatlar beruvchi tizimdir.
+Git-ni dasturiy ta'minotni ishlab chiqishda buyuruqlar orqali ishlatish mumkin:
+masalan:
+
+    git init: bu buyuruq git-repozitoriyasini yaratish uchun ishlatiladi.
+    git clone <repository_url>: bu buyuruq ushbu buyruq mavjud Git-repozitoriyasini noutbookingizga nusxalab olish uchun ishlatiladi.
+    git add <file_or_directory>: bu buyuruq menimcha fayl yoki katalogni indeksga qo'shish uchun ishlatiladi.
+    git commit -m "Commit message": bu buyuruq fayllarning joriy holatini saqlash va ular haqida izoh qoldirish uchun ishlatiladi.
+    git push: bu buyuruq o'zgartirishlarni masofaviy repozitoriyaga jo'natish uchun ishlatiladi.
+    git status: bu buyuruq o'zgarishlarni ko'rib chiqish uchun ishlatiladi.
+
+
+  4-savol
+  eng: What is the purpose of the __init__ method in Python classes? Provide an example.
+  uz: Python sinflarida __init__ usulining maqsadi nima? Misol keltiring.
+
+__init__ ning maqsadi Python sinflarida obyektni boshlang'ich holatga o'rnatishdir.
+Bu metod sinf obyektini yaratganda avtomatik ravishda chaqiriladi.
+Masalan.
+
+ class Mashina:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"Car: {self.year} {self.make} {self.model}")
+
+# Sinfi sinab ko'ramiz
+my_car = Moshina("Ravon", "Gentra", 2022)
+my_car.display_info()  # Chiqaradi: "Car: 2022 Ravon Gentra"
+
+5-savol
+ eng: How does inheritance work in Python? Give an example demonstrating single and multiple inheritance.
+ uz: Pythonda meros qanday ishlaydi? Yagona va ko'p merosni ko'rsatadigan misol keltiring.
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def sound(self):
+        pass  # Buni bosh qoldiramiz, chunki bu metodni har bir hay
+
+class Dog(Animal):
+    def sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow!"
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+print(f"{dog.name} says: {dog.sound()}")  # "Buddy says: Woof!"
+print(f"{cat.name} says: {cat.sound()}")  # "Whiskers says: Meow!"
+
+6-savol
+ eng: Write a Python function to check if a given number is even or not.
+ uz: Berilgan raqam juft yoki yoʻqligini tekshirish uchun Python funksiyasini yozing.
+
+def juftmi(son):
+    return son % 2 == 0
+raqam = 10
+if juftmi(raqam):
+    print(f"{raqam} juft son.")
+else:
+    print(f"{raqam} toq son.")
+
+7-savol
+ eng: Write a Python class representing a library, allowing users to add books, remove books, and display the available books (txt faylga yozsin va o’qisin).
+ uz:Foydalanuvchilarga kitob qo‘shish,
+ kitoblarni o‘chirish va mavjud kitoblarni ko‘rsatish imkonini beruvchi kutubxonani ifodalovchi Python sinfini yozing (txt faylga yozsin va o‘qisin).
+
+
+
+
+
